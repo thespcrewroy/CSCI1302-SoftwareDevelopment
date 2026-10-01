@@ -6,10 +6,6 @@ To demonstrate the benefits of interfaces, we will use a short `UGABookstore` cl
 > <b>You can safely assume that the UGABookstore class has access to the Visa and Paypal classes.</b>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
-</p>
-
-<p align="center">
   <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-1.png" />
 </p>
 
@@ -36,10 +32,6 @@ public class UGABookstore {
 
 Both `purchase` methods represent method overloading. The only difference between them is the first parameter.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
-</p>
-
 <details>
 <summary><b>How would the code above change if we wanted to support payments from other payment processors without using the <code>PaymentProcessor</code> interface? For example, the other payment processor could be <code>Affirm</code>.</b></summary>
 <br>
@@ -56,4 +48,41 @@ We would need 20 additional purchase methods. Uh oh…
 
 </details>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
 
+We might say that all three services mentioned earlier (Visa, PayPal, and Affirm) must be able to process payments and print receipts. Those are the two critical actions that all payment processors must be able to perform. We might also say that each service charges a 1.5% transaction fee to process a payment. In this case, we could define the interface in Java as follows:
+
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-2.png" />
+</p>
+
+```java
+public interface PaymentProcessor {
+
+    /** The fee for processing a transaction. */
+    public static final double FEE_PERCENTAGE = 1.5;
+
+    /**
+     * Processes a payment for the specified {@code amount}. The details
+     * of how the payment is processed depends on the implementing class.
+     *
+     * @param amount the amount to process.
+     * @return if payment is successful
+     */
+    public abstract boolean processPayment(double amount);
+
+    /**
+     * Prints a receipt to the specified {@code customer} for the
+     * specified {@code amount}.
+     *
+     * @param customer the name of the customer who made the payment.
+     * @param amount the amount of the payment.
+     */
+    public abstract void printReceipt(String customer, double amount);
+
+} // PaymentProcessor
+```
+> An example interface with two abstract methods and a constant
