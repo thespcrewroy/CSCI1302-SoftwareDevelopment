@@ -118,3 +118,90 @@ public class PayPal implements PaymentProcessor {
 } // PayPal
 ```
 > Sample implementation for the `PayPal` implementing class
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+Take a moment to revisit the code from earlier. Think about how the PaymentProcessor interface might help us improve this code.
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-3.png" />
+</p>
+
+```java
+public class UGABookstore {
+
+    public static boolean purchase(PaymentProcessor payment, String customerName, double amount) {
+        payment.processPayment(amount);
+        payment.printReceipt(customerName, amount);
+        return true;
+    } // purchase
+
+    public static void main(String[] args) {
+        PaymentProcessor p1 = new Visa();
+        purchase(p1, "Alice", 120.00);
+
+        PaymentProcessor p2 = new PayPal();
+        purchase(p2, "Bob", 45.50);
+    } // main
+
+} // UGABookstore
+```
+
+```java
+public interface PaymentProcessor {
+
+    /** The fee for processing a transaction. */
+    public static final double FEE_PERCENTAGE = 1.5;
+
+    /**
+     * Processes a payment for the specified {@code amount}. The details
+     * of how the payment is processed depends on the implementing class.
+     *
+     * @param amount the amount to process.
+     * @return if payment is successful
+     */
+    public abstract boolean processPayment(double amount);
+
+    /**
+     * Prints a receipt to the specified {@code customer} for the
+     * specified {@code amount}.
+     *
+     * @param customer the name of the customer who made the payment.
+     * @param amount the amount of the payment.
+     */
+    public abstract void printReceipt(String customer, double amount);
+
+} // PaymentProcessor
+```
+
+```java
+public class PayPal implements PaymentProcessor {
+
+    public boolean processPayment(double amount) {
+        System.out.println("Processing PayPal Payment of $" + amount);
+        return true;
+    } // processPayment
+
+    public void printReceipt(String customer, double amount) {
+        System.out.println(customer + " has completed a PayPal purchase in the amount of $" + amount);
+    } // printReceipt
+
+} // PayPal
+```
+
+```java
+public class Visa implements PaymentProcessor {
+
+    public boolean processPayment(double amount) {
+        System.out.println("Processing Visa Card Payment of $" + amount);
+        return true;
+    } // processPayment
+
+    public void printReceipt(String customer, double amount) {
+        System.out.println(customer + " has completed a Visa purchase in the amount of $" + amount);
+    } // printReceipt
+
+} // Visa
+```
