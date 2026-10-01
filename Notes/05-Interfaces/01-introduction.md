@@ -6,7 +6,7 @@ To demonstrate the benefits of interfaces, we will use a short `UGABookstore` cl
 > <b>You can safely assume that the UGABookstore class has access to the Visa and Paypal classes.</b>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="2000" />
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
 </p>
 
 <p align="center">
@@ -37,9 +37,13 @@ public class UGABookstore {
 Both `purchase` methods represent method overloading. The only difference between them is the first parameter.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/water.png" width="2000" />
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
 </p>
 
-Q) How would the code above change if we wanted to support payments from other payment processors without using the PaymentProcessor interface? For example, the other payment processor could be Affirm.
+<details>
+<summary><b>How would the code above change if we wanted to support payments from other payment processors without using the PaymentProcessor interface? For example, the other payment processor could be Affirm.</b></summary>
 
 We would need to add another purchase method that takes in a reference to an Affirm object.
+  
+</details>
+
