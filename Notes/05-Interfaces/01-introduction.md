@@ -205,3 +205,28 @@ public class Visa implements PaymentProcessor {
 
 } // Visa
 ```
+
+<details>
+<summary><b>How many classes/interfaces does <code>UGABookstore</code> depend on in each UML diagram?</b></summary>
+<br>
+The "Before" UML diagram shows that UGABookstore depends on both `Visa` and `PayPal`. The "After" UML diagram shows that it only depends on PaymentProcessor
+  
+</details>
+
+<details>
+<summary><b>Which diagram has fewer <code>dependsOn</code> annotations?</b></summary>
+
+<br>
+
+"After" has fewer.
+
+</details>
+
+<details>
+<summary><b>Do you think it's good or bad for our <code>UGABookstore</code> class to have to have fewer dependencies?</b></summary>
+
+<br>
+
+It is better to have fewer. If we add more payment processors that implement the interface, the `UGABookstore` class will not have to change because it won't depend on those new classes. Thanks to the interface, `UGABookstore` only depends on the interface for processing payments.
+
+</details>
