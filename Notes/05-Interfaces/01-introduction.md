@@ -42,9 +42,7 @@ Both `purchase` methods represent method overloading. The only difference betwee
 
 <details>
 <summary><b>How would the code above change if we wanted to support payments from other payment processors without using the <code>PaymentProcessor</code> interface? For example, the other payment processor could be <code>Affirm</code>.</b></summary>
-
 <br>
-
 We would need to add another purchase method that takes in a reference to an `Affirm` object.
   
 </details>
