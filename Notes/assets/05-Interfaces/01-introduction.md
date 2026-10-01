@@ -3,7 +3,7 @@
 To demonstrate the benefits of interfaces, we will use a short `UGABookstore` class with methods allowing customers to purchase items in different ways (with Visa or PayPal). The code below shows how you might write the code to process payments with Visa and PayPal.
 
 > [!NOTE]\
-> <b>You can safely assume that the UGABookstore class has access to the Visa and Paypal classes and that any methods called exist in those classes.</b>
+> <b>You can safely assume that the UGABookstore class has access to the Visa and Paypal classes.</b>
 
 ```java
 public class UGABookstore {
