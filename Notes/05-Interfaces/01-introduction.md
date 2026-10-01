@@ -35,7 +35,7 @@ Both `purchase` methods represent method overloading. The only difference betwee
 <details>
 <summary><b>How would the code above change if we wanted to support payments from other payment processors without using the <code>PaymentProcessor</code> interface? For example, the other payment processor could be <code>Affirm</code>.</b></summary>
 <br>
-We would need to add another purchase method that takes in a reference to an `Affirm` object.
+We would need to add another purchase method that takes in a reference to an <code>Affirm</code> object.
   
 </details>
 
@@ -209,7 +209,7 @@ public class Visa implements PaymentProcessor {
 <details>
 <summary><b>How many classes/interfaces does <code>UGABookstore</code> depend on in each UML diagram?</b></summary>
 <br>
-The "Before" UML diagram shows that UGABookstore depends on both `Visa` and `PayPal`. The "After" UML diagram shows that it only depends on PaymentProcessor
+The "Before" UML diagram shows that UGABookstore depends on both <code>Visa</code> and <code>PayPal</code>. The "After" UML diagram shows that it only depends on <code>PaymentProcessor</code>.
   
 </details>
 
@@ -227,6 +227,6 @@ The "Before" UML diagram shows that UGABookstore depends on both `Visa` and `Pay
 
 <br>
 
-It is better to have fewer. If we add more payment processors that implement the interface, the `UGABookstore` class will not have to change because it won't depend on those new classes. Thanks to the interface, `UGABookstore` only depends on the interface for processing payments.
+It is better to have fewer. If we add more payment processors that implement the interface, the <code>UGABookstore</code> class will not have to change because it won't depend on those new classes. Thanks to the interface, <code>UGABookstore</code> only depends on the interface for processing payments.
 
 </details>
