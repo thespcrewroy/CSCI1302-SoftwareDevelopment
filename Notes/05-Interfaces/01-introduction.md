@@ -86,3 +86,35 @@ public interface PaymentProcessor {
 } // PaymentProcessor
 ```
 > An example interface with two abstract methods and a constant
+
+```java
+public class Visa implements PaymentProcessor {
+
+    public boolean processPayment(double amount) {
+        System.out.println("Processing Visa Card Payment of $" + amount);
+        return true;
+    } // processPayment
+
+    public void printReceipt(String customer, double amount) {
+        System.out.println(customer + " has completed a Visa purchase in the amount of $" + amount);
+    } // printReceipt
+
+} // Visa
+```
+>  Sample implementation for the `Visa` implementing class
+
+```java
+public class PayPal implements PaymentProcessor {
+
+    public boolean processPayment(double amount) {
+        System.out.println("Processing PayPal Payment of $" + amount);
+        return true;
+    } // processPayment
+
+    public void printReceipt(String customer, double amount) {
+        System.out.println(customer + " has completed a PayPal purchase in the amount of $" + amount);
+    } // printReceipt
+
+} // PayPal
+```
+> Sample implementation for the `PayPal` implementing class
