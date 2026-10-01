@@ -5,6 +5,10 @@ To demonstrate the benefits of interfaces, we will use a short `UGABookstore` cl
 > [!NOTE]\
 > <b>You can safely assume that the UGABookstore class has access to the Visa and Paypal classes.</b>
 
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-1.png" />
+</p>
+
 ```java
 public class UGABookstore {
 
