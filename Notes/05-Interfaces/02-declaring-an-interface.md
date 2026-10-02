@@ -149,3 +149,6 @@ public class SuperFancy implements Styleable {
 
 ```
 > in cs1302/interfaces/impl/SuperFancy.java
+
+> [!IMPORTANT]\
+> Now, take a moment to compare the Javadoc comments in the source code for the `Styleable` interface with the comments written in the source code for the implementing `Fancy` class. In some cases, new comments are provided. In others, it appears as though Javadoc comments are omitted. In the latter case, this is actually not true. View the API documentation website for both the `Styleable` interface and the `Fancy` class. All of the methods in `Fancy` are documented, even `style()` and `unstyle()` which have no Javadoc comments in the source code. This happens because the Javadoc tool has the ability to inherit comments from an interface when omitted or when explicitly requested in the implementing class's Javadoc comment using the `{@inheritDoc}` tag.
