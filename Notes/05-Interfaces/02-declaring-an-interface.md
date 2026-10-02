@@ -243,6 +243,9 @@ public class Driver {
 
 } // Driver
 ```
+> Calling the `style` method on different object types with a single variable
+
+<br>
 
 The real benefit of polymorphism is that it enables us to write code using the interface type instead of having to write the same code for different types of compatible objects. The fact that variable `s` in the code above can refer to objects of any implementing class type, enables us to write the following method in `cs1302.interfaces.StyleDriver`:
 
@@ -282,3 +285,40 @@ public class StyleDriver {
 } // StyleDriver
 ```
 > Polymorphic Method Execution in `StyleDriver.java`
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-6.svg" />
+</p>
+
+
+Because an interface defines a reference type, you can also create arrays of interface references. An array whose component type is an interface can store references to instances of any class that implements that interface. This allows programs to manage heterogeneous collections of objects under a single unified type Consider creating a Styleable[] array that stores both `Fancy` and `SuperFancy` objects. An enhanced for-loop can iterate through each element and invoke interface methods without needing the concrete class of each:
+
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-7.svg" />
+</p>
+
+```java
+package cs1302.interfaces;
+
+import cs1302.interfaces.contract.Styleable;
+import cs1302.interfaces.impl.Fancy;
+import cs1302.interfaces.impl.SuperFancy;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        Styleable[] items = new Styleable[] {
+            new Fancy("First"),
+            new SuperFancy("Second")
+        };
+
+        for (Styleable item : items) {
+            item.style();
+            System.out.println(item);
+        } // for
+    } // main
+
+} // Driver
+```
+> Iterating through an array of mixed `Styleable` objects
