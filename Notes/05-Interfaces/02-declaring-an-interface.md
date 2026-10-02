@@ -152,3 +152,41 @@ public class SuperFancy implements Styleable {
 
 > [!IMPORTANT]\
 > Now, take a moment to compare the Javadoc comments in the source code for the `Styleable` interface with the comments written in the source code for the implementing `Fancy` class. In some cases, new comments are provided. In others, it appears as though Javadoc comments are omitted. In the latter case, this is actually not true. View the API documentation website for both the `Styleable` interface and the `Fancy` class. All of the methods in `Fancy` are documented, even `style()` and `unstyle()` which have no Javadoc comments in the source code. This happens because the Javadoc tool has the ability to inherit comments from an interface when omitted or when explicitly requested in the implementing class's Javadoc comment using the `{@inheritDoc}` tag.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+<details>
+<summary><b>If adding the interface relationship requires us to write more code, where does the benefit to all of this occur?</b></summary>
+<br>
+  
+The benefit comes when we use these classes in a calling method or a driver class. In the payment processor example, we were able to reduce the number of methods required in the driver program after adding the interface relationship.
+
+</details>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+
+Reference variables are called as such because they refer to objects. However, you can only create objects from classes (not interfaces)! Therefore, what can a `Styleable` variable refer to? The answer is that a variable with an interface as its type can refer to an object of any class that implements that interface:
+
+```java
+package cs1302.interfaces;
+
+import cs1302.interfaces.contract.Styleable;
+import cs1302.interfaces.impl.Fancy;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        Styleable s = new Fancy("some message");
+    } // main
+
+} // Driver
+```
+> Compatible interface reference assignment
+
+
