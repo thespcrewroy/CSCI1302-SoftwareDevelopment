@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"cs1302.interfaces","l":"Alumnus"},{"p":"cs1302.interfaces","l":"Company"},{"p":"cs1302.interfaces","l":"DonationDriver"},{"p":"cs1302.interfaces","l":"Donator"},{"p":"cs1302.interfaces","l":"Faculty"},{"p":"cs1302.interfaces","l":"Utility"}];updateSearchResults();

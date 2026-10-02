@@ -62,7 +62,7 @@ public class Utility {
     } // genFaculty
 
     /**
-     * Populates an array of {@link Alumni} references with
+     * Populates an array of {@link Alumnus} references with
      * randomly assigned values for salary and graduation year.
      *
      * @param alumni a reference to a pre-allocated array of

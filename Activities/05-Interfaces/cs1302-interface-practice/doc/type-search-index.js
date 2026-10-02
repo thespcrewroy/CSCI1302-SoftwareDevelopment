@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"cs1302.interfaces.example","l":"Driver"},{"p":"cs1302.interfaces.example","l":"EditedPhoto"},{"p":"cs1302.interfaces.example","l":"Note"},{"p":"cs1302.interfaces.example","l":"Savable"},{"p":"cs1302.interfaces.example","l":"UserProfile"}];updateSearchResults();
