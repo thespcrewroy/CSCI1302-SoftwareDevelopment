@@ -170,7 +170,7 @@ The benefit comes when we use these classes in a calling method or a driver clas
 Reference variables are called as such because they refer to objects. However, you can only create objects from classes (not interfaces)! Therefore, what can a `Styleable` variable refer to? The answer is that a variable with an interface as its type can refer to an object of any class that implements that interface:
 
 <p align="center">
-  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-1.png" />
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-4.svg" />
 </p>
 
 ```java
