@@ -26,7 +26,8 @@ Compare that to the actual abstract method signature presented above that ends w
 
 Remember, that the abstract method(s) represent what the signer of the contract must be able to do. If a class implements the `Styleable` interface, it is obligated to have a concrete `style` and/or a concrete `unstyle` method. If an implementing class does not have implementations for one or both of these methods, it will not compile.
 
-In Java, the declaration of an abstract method in the source code for an interface may omit the public visibility modifier. If public is omitted in this context, the abstract method is still assumed to have public visibility. This behavior is different for classes, a topic that will be covered more in-depth at a later time when the nuances of visibility are presented.
+> [!NOTE]\
+> In Java, the declaration of an abstract method in the source code for an interface may omit the public visibility modifier. If public is omitted in this context, the abstract method is still assumed to have public visibility. This behavior is different for classes, turning into a package-private method instead if the modifier is omitted.
 
 ```java
 package cs1302.interfaces.contract;
