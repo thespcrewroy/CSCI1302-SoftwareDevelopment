@@ -153,7 +153,6 @@ public class SuperFancy implements Styleable {
 > [!IMPORTANT]\
 > Now, take a moment to compare the Javadoc comments in the source code for the `Styleable` interface with the comments written in the source code for the implementing `Fancy` class. In some cases, new comments are provided. In others, it appears as though Javadoc comments are omitted. In the latter case, this is actually not true. View the API documentation website for both the `Styleable` interface and the `Fancy` class. All of the methods in `Fancy` are documented, even `style()` and `unstyle()` which have no Javadoc comments in the source code. This happens because the Javadoc tool has the ability to inherit comments from an interface when omitted or when explicitly requested in the implementing class's Javadoc comment using the `{@inheritDoc}` tag.
 
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
 </p>
@@ -188,3 +187,59 @@ public class Driver {
 } // Driver
 ```
 > Compatible interface reference assignment
+
+<br>
+
+When an object is referred to via a reference variable with an interface type, the only methods then can be called using that variable are the ones declared in the interface, regardless of whether the object's class declared other methods. For example, even though the `getAbout()` method is declared in the `SuperFancy` class and therefore is part of a `SuperFancy` object, it would not be available via a `Styleable`:
+
+```java
+Styleable s = new SuperFancy("some fancier message?");
+s.style();                    // OK
+s.unstyle();                  // OK
+String about = s.getAbout();  // NOT OK! -- variable type is Styleable
+```
+> You cannot call `getAbout` if you have a `Styleable` variable. Only methods in the `Styleable` interface are available.
+
+<br>
+
+```java
+SuperFancy sf = new SuperFancy("some fancier message?");
+sf.style();                    // OK
+sf.unstyle();                  // OK
+String about = sf.getAbout();  // OK -- variable type is SuperFancy
+```
+> You can call `getAbout` on a `SuperFancy` object if you have a `SuperFancy` variable.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+The ability to assign object references to variables with interface types leads to a powerful programming technique known as polymorphism. Polymorphism is derived from the Greek words poly and morphus, which roughly translates to many bodies. Polymorphism leverages our ability to have a variable appear to take on many forms (or bodies) depending on the object it refers to:
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-5.svg" />
+</p>
+
+```java
+package cs1302.interfaces;
+
+import cs1302.interfaces.contract.Styleable;
+import cs1302.interfaces.impl.Fancy;
+import cs1302.interfaces.impl.SuperFancy;
+
+public class Driver {
+
+    public static void main(String[] args) {
+        Styleable s;
+
+        s = new Fancy("some fancy message");
+        s.style();
+        System.out.println(s); // invoke toString() method
+
+        s = new SuperFancy("some fancier message?");
+        s.style();
+        System.out.println(s); // invoke toString() method
+    } // main
+
+} // Driver
+```
