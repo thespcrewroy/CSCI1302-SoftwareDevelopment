@@ -50,3 +50,102 @@ public interface Styleable {
 } // Styleable
 ```
 > Complete Interface in `cs1302/interfaces/contract/Styleable.java`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+Take a moment to inspect the source code for the `cs1302.interfaces.impl.Fancy` class. You will see both of the abstract methods from `Styleable` implemented. Notice that the implementations contain method bodies (instead of their signatures ending with a semicolon).
+
+```java
+package cs1302.interfaces.impl;
+
+import cs1302.interfaces.contract.Styleable;
+
+public class Fancy implements Styleable {
+
+    private String message;
+    private boolean styled;
+
+    public Fancy(String msg) {
+        message = msg;
+        styled = false;
+    } // Fancy
+
+    @Override
+    public void style() {
+        styled = true;
+    } // style
+
+    @Override
+    public void unstyle() {
+        styled = false;
+    } // unstyle
+
+    public String toString() {
+        String content;
+        if (styled) {
+            content = "*** " + message + " ***";
+        } else {
+            content = message;
+        } // if
+        return String.format("Fancy(%s)", content);
+    } // toString
+
+} // Fancy
+```
+> in cs1302/interfaces/impl/Fancy.java
+
+<br>
+
+Here is the implementation for `SuperFancy`, which provides alternate casing when styled and declares an additional `getAbout()` method:
+```java
+package cs1302.interfaces.impl;
+
+import cs1302.interfaces.contract.Styleable;
+
+public class SuperFancy implements Styleable {
+
+    private String message;
+    private boolean styled;
+
+    public SuperFancy(String msg) {
+        message = msg;
+        styled = false;
+    } // SuperFancy
+
+    @Override
+    public void style() {
+        styled = true;
+    } // style
+
+    @Override
+    public void unstyle() {
+        styled = false;
+    } // unstyle
+
+    public String getAbout() {
+        return "A styled SuperFancy object contains alternating characters.";
+    } // getAbout
+
+    public String toString() {
+        String content = "";
+        if (styled) {
+            for (int i = 0; i < message.length(); i++) {
+                if (i % 2 == 0) {
+                    content += Character.toUpperCase(message.charAt(i));
+                } else {
+                    content += Character.toLowerCase(message.charAt(i));
+                } // if
+            } // for
+            content = "*** " + content + " ***";
+        } else {
+            content = message;
+        } // if
+        return String.format("Super Fancy(%s)", content);
+    } // toString
+
+} // SuperFancy
+
+```
+> in cs1302/interfaces/impl/SuperFancy.java
