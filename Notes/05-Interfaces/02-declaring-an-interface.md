@@ -243,3 +243,42 @@ public class Driver {
 
 } // Driver
 ```
+
+The real benefit of polymorphism is that it enables us to write code using the interface type instead of having to write the same code for different types of compatible objects. The fact that variable `s` in the code above can refer to objects of any implementing class type, enables us to write the following method in `cs1302.interfaces.StyleDriver`:
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/5-6.svg" />
+</p>
+
+
+```java
+package cs1302.interfaces;
+
+import cs1302.interfaces.contract.Styleable;
+import cs1302.interfaces.impl.Fancy;
+import cs1302.interfaces.impl.SuperFancy;
+
+public class StyleDriver {
+
+    public static void test(String testName, Styleable s) {
+        System.out.printf("# %s Test\n", testName);
+        System.out.println(s);
+        s.style();
+        System.out.println(s);
+        s.unstyle();
+        System.out.println(s);
+    } // test
+
+    public static void main(String[] args) {
+        Styleable message;
+
+        message = new Fancy("Hello, world...");
+        test("Fancy", message);
+
+        message = new SuperFancy("Hello, world...");
+        test("Super Fancy", message);
+    } // main
+
+} // StyleDriver
+```
+> Polymorphic Method Execution in `StyleDriver.java`
