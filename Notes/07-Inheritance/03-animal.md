@@ -55,9 +55,7 @@ public Student(String name, int age, int studentId) {
     super(name, age);
 
     if (studentId < 0) {
-        throw new IllegalArgumentException(
-            "The student id number must be nonnegative"
-        );
+        throw new IllegalArgumentException("The student id number must be nonnegative");
     } // if
 
     this.studentId = studentId;
@@ -77,11 +75,59 @@ public Professor(String name, int age, int employeeId) {
     super(name, age);
 
     if (employeeId < 0) {
-        throw new IllegalArgumentException(
-            "The employee id number must be nonnegative"
-        );
+        throw new IllegalArgumentException("The employee id number must be nonnegative");
     } // if
 
+    this.employeeId = employeeId;
+} // Professor
+```
+
+</details>
+
+<details>
+<summary><b>The constructor for the Professor class should look almost identical to the Student constructor with studentId replaced with employeeId. Can you think of a way to avoid redundancy by writing a method to check if the id is valid?</b></summary>
+
+<br>
+
+```java
+/**
+ * Error checking.
+ * 
+ * @throws IllegalArgumentException if the id number is negative.
+ * /
+protected static void validateId(int id, String idType) {
+    if (id < 0) {
+        throw new IllegalArgumentException("The " + idType + " must be nonnegative");
+    } // if
+} // validateId
+```
+
+```java
+/**
+ * Initializes the instance variables of a new {@code Student} object.
+ *
+ * @param name the name of the student.
+ * @param age the age of the student.
+ * @param studentId the student's id number.
+ */
+public Student(String name, int age, int studentId) {
+    super(name, age);
+    validateId(studentId, "student id number");
+    this.studentId = studentId;
+} // Student
+```
+
+```java
+/**
+ * Initializes the instance variables of a new {@code Professor} object.
+ *
+ * @param name the name of the professor.
+ * @param age the age of the professor.
+ * @param employeeId the professor's employee id number.
+ */
+public Professor(String name, int age, int employeeId) {
+    super(name, age);
+    validateId(employeeId, "employee id number");
     this.employeeId = employeeId;
 } // Professor
 ```
