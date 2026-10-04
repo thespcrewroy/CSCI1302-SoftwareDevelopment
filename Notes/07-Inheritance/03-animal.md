@@ -91,7 +91,7 @@ public Professor(String name, int age, int employeeId) {
 
 ```java
 /**
- * Initializes the instance variables of a new {@code Student} object.
+ * Error handling method for sub-class id numbers.
  *
  * @throws IllegalArgumentException if the id number is negative.
  */
