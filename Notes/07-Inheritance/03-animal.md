@@ -42,6 +42,7 @@ Would you say that `Dog` is an `Animal`? Yes. So, the inheritance relationship i
 <br>
 
 <code>
+
 /**
  * Initializes the instance variables of a new {@code Student} object.
  *
@@ -60,6 +61,7 @@ public Student(String name, int age, int studentId) {
 
    this.studentId = studentId;
 } // Student
+
 </code>
 
 </details>
