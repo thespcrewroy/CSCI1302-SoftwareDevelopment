@@ -7,7 +7,7 @@ package cs1302.animal;
  */
 public class Dog extends Animal {
 
-    private String breed;
+    private final String breed;
 
     /**
      * Constructs a {@code Dog} object with the specified {@code breed}.
@@ -15,6 +15,7 @@ public class Dog extends Animal {
      * @param breed  breed name of the dog
      */
     public Dog(String breed) {
+        super("Canis", "Lupus Familiaris");
         this.breed = breed;
     } // Dog
 

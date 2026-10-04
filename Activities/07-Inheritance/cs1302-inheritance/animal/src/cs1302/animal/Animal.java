@@ -8,8 +8,8 @@ package cs1302.animal;
  */
 public class Animal {
 
-    private String genus;
-    private String species;
+    private final String genus;
+    private final String species;
 
     /**
      * Constructs a {@code Animal} object with the specified {@code genus} and
