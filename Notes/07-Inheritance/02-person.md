@@ -21,7 +21,7 @@ By utilizing the power of inheritance, we were able to remove two redundant inst
 </p>
 
 <details>
-<summary><b>Given the UML Class Diagram below, write the constructor(s) for the child class(es) in your notes. If the user inputs a negative value for an id, the constructor(s) should throw an <code>IllegalArgumentException</code> containing an appropriate message.</b></summary>
+<summary><b>Given the UML Class Diagram above, write the constructor(s) for the child class(es) in your notes. If the user inputs a negative value for an id, the constructor(s) should throw an <code>IllegalArgumentException</code> containing an appropriate message.</b></summary>
 
 <br>
 
