@@ -7,8 +7,8 @@ import java.time.LocalDate;
  */
 public class Person {
 
-    private String name;
-    private LocalDate dateOfBirth;
+    private final String name;
+    private final LocalDate dateOfBirth;
 
     /**
      * Constructs a {@code Person} object with the given {@code name}

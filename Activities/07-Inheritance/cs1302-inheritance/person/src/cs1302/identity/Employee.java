@@ -5,12 +5,10 @@ import java.time.LocalDate;
 /**
  * An {@code Employee} is a person who is employed.
  */
-public class Employee {
+public class Employee extends Person {
 
-    private long id;
-    private String name;
-    private LocalDate dateOfBirth;
-    private LocalDate dateOfHire;
+    private final long id;
+    private final LocalDate dateOfHire;
 
     /**
      * Constructs a {@code Employee} object with the given {@code id},
@@ -22,9 +20,8 @@ public class Employee {
      * @param dateOfHire   date of hire
      */
     public Employee(long id, String name, LocalDate dateOfBirth, LocalDate dateOfHire) {
+        super(name, dateOfBirth);
         this.id = id;
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
         this.dateOfHire = dateOfHire;
     } // Employee
 
@@ -34,26 +31,8 @@ public class Employee {
      * @return employee id
      */
     public long getId() {
-        return id;
+        return this.id;
     } // getId
-
-    /**
-     * Returns the name of this employee.
-     *
-     * @return name of this employee
-     */
-    public String getName() {
-        return name;
-    } // getName
-
-    /**
-     * Returns the date of birth of this employee.
-     *
-     * @return date of birth of this employee
-     */
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    } // getDateOfBirth
 
     /**
      * Returns the hiring date for this employee.
@@ -61,23 +40,12 @@ public class Employee {
      * @return hiring date for this employee
      */
     public LocalDate getDateOfHire() {
-        return dateOfHire;
+        return this.dateOfHire;
     } // getDateOfHire
-
-    /**
-     * Computes and returns the current age of this employee.
-     *
-     * @return current age of this employee
-     */
-    public int computeAge() {
-        final LocalDate now = LocalDate.now();
-        return dateOfBirth.until(now).getYears();
-    } // computeAge
 
     @Override
     public String toString() {
-        return String.format("Employee(id = %d, name = %s, dateOfBirth = %s, dateOfHire = %s)",
-                             id, name, dateOfBirth, dateOfHire);
+        return String.format("Employee(id = %d, name = %s, dateOfBirth = %s, dateOfHire = %s)", getId(), getName(), getDateOfBirth(), getDateOfHire());
     } // toString
 
 } // Employee
