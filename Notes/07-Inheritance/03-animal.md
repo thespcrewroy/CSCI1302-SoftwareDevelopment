@@ -93,9 +93,7 @@ public Professor(String name, int age, int employeeId) {
 /**
  * Initializes the instance variables of a new {@code Student} object.
  *
- * @param name the name of the student.
- * @param age the age of the student.
- * @param studentId the student's id number.
+ * @throws IllegalArgumentException if the id number is negative.
  */
 protected static void validateId(int id, String idType) {
     if (id < 0) {
