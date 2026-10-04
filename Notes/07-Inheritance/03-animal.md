@@ -38,28 +38,52 @@ Would you say that `Dog` is an `Animal`? Yes. So, the inheritance relationship i
 </p>
 
 <details>
-<summary><b>Given the UML Class Diagram below, write the constructor(s) for the child class(es) in your notes. If the user inputs a negative value for an id, the constructor(s) should throw an <code>IllegalArgumentException</code> containing an appropriate message?</b></summary>
+<summary><b>Given the UML Class Diagram below, write the constructor(s) for the child class(es) in your notes. If the user inputs a negative value for an id, the constructor(s) should throw an <code>IllegalArgumentException</code> containing an appropriate message.</b></summary>
+
 <br>
 
-<code>
+```java
 /**
  * Initializes the instance variables of a new {@code Student} object.
  *
  * @param name the name of the student.
  * @param age the age of the student.
  * @param studentId the student's id number.
- * @throws IllegalArgumentException if the student id number is a negative value.
+ * @throws IllegalArgumentException if the student id number is negative.
  */
 public Student(String name, int age, int studentId) {
+    super(name, age);
 
-   super(name, age);
+    if (studentId < 0) {
+        throw new IllegalArgumentException(
+            "The student id number must be nonnegative"
+        );
+    } // if
 
-   if (studentId < 0) {
-      throw new IllegalArgumentException("The student id number must be nonnegative");
-   } // if
-
-   this.studentId = studentId;
+    this.studentId = studentId;
 } // Student
-</code>
+```
+
+```java
+/**
+ * Initializes the instance variables of a new {@code Professor} object.
+ *
+ * @param name the name of the professor.
+ * @param age the age of the professor.
+ * @param employeeId the professor's employee id number.
+ * @throws IllegalArgumentException if the employee id number is negative.
+ */
+public Professor(String name, int age, int employeeId) {
+    super(name, age);
+
+    if (employeeId < 0) {
+        throw new IllegalArgumentException(
+            "The employee id number must be nonnegative"
+        );
+    } // if
+
+    this.employeeId = employeeId;
+} // Professor
+```
 
 </details>
