@@ -91,10 +91,12 @@ public Professor(String name, int age, int employeeId) {
 
 ```java
 /**
- * Error checking.
- * 
- * @throws IllegalArgumentException if the id number is negative.
- * /
+ * Initializes the instance variables of a new {@code Student} object.
+ *
+ * @param name the name of the student.
+ * @param age the age of the student.
+ * @param studentId the student's id number.
+ */
 protected static void validateId(int id, String idType) {
     if (id < 0) {
         throw new IllegalArgumentException("The " + idType + " must be nonnegative");
