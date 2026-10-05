@@ -15,6 +15,7 @@ public abstract class Shape {
      * @throws NullPointerException if {@code name} is {@code null}
      * @throws IllegalArgumentException if {@code name} is an empty string
      */
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Shape(String name) {
         setName(name);
     } // Shape

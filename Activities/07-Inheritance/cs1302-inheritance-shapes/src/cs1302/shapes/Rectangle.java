@@ -6,9 +6,9 @@ package cs1302.shapes;
 public class Rectangle extends Shape {
 
     /** Length of the Rectangle. **/
-    private double length;
+    private final double length;
     /** Width of the Rectangle. **/
-    private double width;
+    private final double width;
 
     /**
      * Constructs a {@link Rectangle} object with the specified length
@@ -47,6 +47,7 @@ public class Rectangle extends Shape {
      *
      * @return the area of this rectangle
      */
+    @Override 
     public double getArea() {
         return this.length * this.width;
     } // getArea
@@ -57,6 +58,7 @@ public class Rectangle extends Shape {
      *
      * @return the perimeter of this rectangle
      */
+    @Override
     public double getPerimeter() {
         return 2.0 * this.length + 2.0 * this.width;
     } // getPerimeter

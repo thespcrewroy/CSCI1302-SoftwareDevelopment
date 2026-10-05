@@ -14,9 +14,11 @@ public class Circle extends Ellipse {
      *
      * @param radius the radius of
      */
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Circle(double radius) {
-        /* A circle is the same as an ellipse where the semi-major and semi-minor axis lengths are
-         * equal.
+        /**
+         * A {@link Circle} is the same as an ellipse where 
+         * the semi-major and semi-minor axis lengths are equal.
          */
         super(radius, radius);
         setName("Circle");
@@ -50,7 +52,6 @@ public class Circle extends Ellipse {
     public double getDiameter() {
         return 2.0 * getRadius();
     } // getDiameter
-
 
     /**
      * Returns the radius of this {@code Circle}.

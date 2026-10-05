@@ -12,10 +12,10 @@ package cs1302.shapes;
 public class Ellipse extends Shape {
 
     /** Length of the semi-major axis. */
-    private double a;
+    private final double a;
 
     /** Length of the semi-minor axis. */
-    private double b;
+    private final double b;
 
     /**
      * Constructs an {@link Ellipse} object with the specified semi-major and semi-minor axis
