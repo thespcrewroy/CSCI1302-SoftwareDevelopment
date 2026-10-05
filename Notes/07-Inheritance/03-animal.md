@@ -32,6 +32,10 @@ Would you say that `Dog` is an `Animal`? Yes. So, the inheritance relationship i
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
 </p>
 
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/7-7.jpg" />
+</p>
+
 ```java
 /**
  * Prints a description of the {@Animal}.
