@@ -33,7 +33,7 @@ Would you say that `Dog` is an `Animal`? Yes. So, the inheritance relationship i
 </p>
 
 <p align="center">
-  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/7-7.jpg" />
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/7-7.png" />
 </p>
 
 ```java
@@ -59,7 +59,7 @@ Would you say that `Dog` is an `Animal`? Yes. So, the inheritance relationship i
 </details>
 
 <details>
-<summary><b>What is the output?.</b></summary>
+<summary><b>What is the output?</b></summary>
 <br>
 
 ```
