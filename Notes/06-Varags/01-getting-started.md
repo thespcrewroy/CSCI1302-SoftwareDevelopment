@@ -67,4 +67,4 @@ public static int sum(int... nums1, int... nums2) {
 
 <br>
 
-These rules enable us to require a minimum number of arguments when the method is called without writing any code to explicitly check the array length. Of course, that can still be done, if needed. The rules also prevent us from writing potentially ambiguous code involving varargs. Here are some quick examples:
+These rules enable us to require a minimum number of arguments when the method is called without writing any code to explicitly check the array length. Of course, that can still be done, if needed. The rules also prevent us from writing potentially ambiguous code involving varargs.
