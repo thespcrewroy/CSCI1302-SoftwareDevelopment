@@ -8,9 +8,9 @@ package cs1302.animal;
  */
 public class Animal {
 
+    private final String name;
     private final String genus;
     private final String species;
-    private final String name;
 
     /**
      * Constructs a {@code Animal} object with the specified {@code genus} and
@@ -20,10 +20,10 @@ public class Animal {
      * @param species  species name of the animal
      * @param name     name of the animal
      */
-    public Animal(String genus, String species, String name) {
+    public Animal(String name, String genus, String species) {
+        this.name = name;
         this.genus = genus;
         this.species = species;
-        this.name = name;
     } // Animal
 
     /**
