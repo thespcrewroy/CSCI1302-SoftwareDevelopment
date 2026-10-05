@@ -48,6 +48,23 @@ public abstract class Shape {
     } // getName
 
     /**
+     * Returns a string representation of this shape.
+     *
+     * @return a string representation of this shape
+     */
+    @Override
+    public String toString() {
+        // returns the shape's name, area, and perimeter.
+        // The exact formatting isn't important.
+
+        String returnVal = this.getName() + " ";
+        returnVal += "has an area of: " + this.getArea();
+        returnVal += " and a perimeter of: " + this.getPerimeter();
+
+        return returnVal;
+    } // toString
+
+    /**
      * Returns the area of this shape.
      *
      * @return the area of this shape
