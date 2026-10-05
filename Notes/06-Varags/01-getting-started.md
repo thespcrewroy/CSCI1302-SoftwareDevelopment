@@ -5,8 +5,6 @@ public static int min(int[] numbers)
 ```
 > Helper.java
 
-<br>
-
 ```java
 int smallest1 = Helper.min(new int[] { 5, 1, -1, 3 });
 int smallest2 = Helper.min(new int[] { 4, 3, 1 });
@@ -22,8 +20,6 @@ The code snippet above is a little tedious because it requires the creation and 
 public static int min(int... numbers)
 ```
 > Helper.java
-
-<br>
 
 ```java
 int smallest1 = Helper.min(5, 1, -1, 3);
