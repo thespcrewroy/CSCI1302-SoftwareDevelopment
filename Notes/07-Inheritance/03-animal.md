@@ -83,3 +83,37 @@ Garfield is an agile cat.
 </p>
 
 By declaring the `Animal` class abstract, we are telling the users of our hierarchy that they should not instantiate it (it doesn't really make sense to do so) and that they should instantiate one of the child classes instead.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/7-9.png" />
+</p>
+
+We can leverage polymorphism in inheritance hierarchies as well. For example, variables of type `Animal` can reference objects of type `Dog`. If we extended this hierarchy further by adding other animals as child classes to `Animal`, the compatibility would work.
+
+```java
+public static void main(String[] args) {
+   Dog fido = new Dog("Juno", "Jack Russell");
+   Animal garfield = new Cat("Garfield");
+
+   // AnimalInfo works for either variable / object!
+   Driver.animalInfo(fido);
+   Driver.animalInfo(garfield);
+} // main
+```
+
+```java
+public static void animalInfo (Animal currentAnimal) {
+   System.out.println("More information about the animal:\n"):
+
+   currentAnimal.describe();
+
+   System.out.println("The animal lets out a loud: ");
+   currentAnimal.makeSound();
+} // animalInfo
+```
+
+Assuming that the `makeSound` method in each child class is implemented and prints an appropriate "sound" for each animal, we could leverage polymorphism to write code using an `Animal` variable like the above.
