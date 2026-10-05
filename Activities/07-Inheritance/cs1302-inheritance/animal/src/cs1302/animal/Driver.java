@@ -6,25 +6,17 @@ package cs1302.animal;
 public class Driver {
 
     public static void main(String[] args) {
-        Dog terrier = new Dog("Terrier"); // object of type Dog
-        Animal dog = terrier; // upcasting
+        Animal animal = new Animal("Canis", "Lupus");
+        Dog dog = new Dog("Golden Retriever", "Buddy");
+        Cat cat = new Cat("Siamese", "Whiskers");
 
-        printAnimalInfo(dog, new Dog("Bulldog"));
-        printAnimalInfo(dog, new Dog("Poodle"));
-        printAnimalInfo(dog, new Dog("Beagle"));
-        printAnimalInfo(dog, new Dog("Pug"));
+        animal.describe();
+        animal.makeSound();
+
+        dog.describe();
+        dog.makeSound();
         
+        cat.describe();
+        cat.makeSound();
     } // main
-
-    /***
-     * Prints information about an animal and its breed.
-     * @param animal the animal
-     * @param dog the dog
-     */
-    public static void printAnimalInfo(Animal animal, Dog dog) {
-        System.out.println("Genus: " + animal.getGenus());
-        System.out.println("Species: " + animal.getSpecies());
-        System.out.println("Breed: " + dog.getBreed());
-    } // printAnimalInfo
-
 } // Driver

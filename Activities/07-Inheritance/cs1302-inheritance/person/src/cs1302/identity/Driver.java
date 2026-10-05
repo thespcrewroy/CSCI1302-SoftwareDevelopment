@@ -16,7 +16,7 @@ public class Driver {
         };
 
         for (Employee employee : employees) {
-            System.out.println(employee);
+            System.out.println(employee.toString());
         } // for
 
     } // main

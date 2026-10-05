@@ -41,4 +41,18 @@ public class Animal {
         return species;
     } // getSpecies
 
+    /**
+     * Makes a sound that the animal makes.
+     */
+    public void makeSound() {
+        System.out.println("Generic animal sound");
+    } // makeSound
+
+    /**
+     * Describes the animal.
+     */
+    public void describe() {
+        System.out.println("This is a " + genus + " " + species);
+    } // describe
+
 } // Animal

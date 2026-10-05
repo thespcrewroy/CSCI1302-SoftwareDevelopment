@@ -8,15 +8,18 @@ package cs1302.animal;
 public class Dog extends Animal {
 
     private final String breed;
+    private final String name;
 
     /**
      * Constructs a {@code Dog} object with the specified {@code breed}.
      *
      * @param breed  breed name of the dog
+     * @param name   name of the dog
      */
-    public Dog(String breed) {
+    public Dog(String breed, String name) {
         super("Canis", "Lupus Familiaris");
         this.breed = breed;
+        this.name = name;
     } // Dog
 
     /**
@@ -28,4 +31,28 @@ public class Dog extends Animal {
         return breed;
     } // getBreed
 
+    /**
+     * Returns the name of the dog.
+     *
+     * @return name of the dog
+     */
+    public String getName() {
+        return name;
+    } // getName
+
+    /**
+     * Makes a sound that the dog makes.
+     */
+    @Override
+    public void makeSound() {
+        System.out.println("Woof!");
+    } // makeSound
+
+    /**
+     * Describes the dog.
+     */
+    @Override
+    public void describe() {
+        System.out.println("This is a " + getGenus() + " " + getSpecies() + " of the breed " + breed + " named " + name);
+    } // describe
 } // Dog
