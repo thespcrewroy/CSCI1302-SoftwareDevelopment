@@ -11,6 +11,7 @@ public abstract class Animal {
     private final String name;
     private final String genus;
     private final String species;
+    private final String diet;
 
     /**
      * Constructs a {@code Animal} object with the specified {@code genus} and
@@ -19,11 +20,13 @@ public abstract class Animal {
      * @param name     name of the animal
      * @param genus    genus name of the animal
      * @param species  species name of the animal
+     * @param diet     diet of the animal
      */
-    public Animal(String name, String genus, String species) {
+    public Animal(String name, String genus, String species, String diet) {
         this.name = name;
         this.genus = genus;
         this.species = species;
+        this.diet = diet;
     } // Animal
 
     /**
@@ -34,6 +37,15 @@ public abstract class Animal {
     public String getName() {
         return name;
     } // getName
+
+    /**
+     * Returns the diet of the animal.
+     *
+     * @return diet of the animal
+     */
+    public String getDiet() {
+        return diet;
+    } // getDiet
 
     /**
      * Returns the genus name of the animal.

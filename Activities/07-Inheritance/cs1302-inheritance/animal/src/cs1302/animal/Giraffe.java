@@ -14,7 +14,7 @@ public class Giraffe extends Animal {
      * @param species species name of the giraffe
      */
     public Giraffe(String name, String species) {
-        super(name, "Giraffa", "Camelopardalis");
+        super(name, "Giraffa", "Camelopardalis", "Herbivore");
     } // Giraffe
 
     /**

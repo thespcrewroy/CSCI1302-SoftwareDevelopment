@@ -16,7 +16,7 @@ public class Dog extends Animal {
      * @param breed  breed name of the dog
      */
     public Dog(String name, String breed) {
-        super(name, "Canis", "Familiaris");
+        super(name, "Canis", "Familiaris", "Carnivore");
         this.breed = breed;
     } // Dog
 

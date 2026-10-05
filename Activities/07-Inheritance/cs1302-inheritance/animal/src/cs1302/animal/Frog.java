@@ -14,7 +14,7 @@ public class Frog extends Animal {
      * @param species species name of the frog
      */
     public Frog(String name, String species) {
-        super(name, "Anura", species);
+        super(name, "Anura", species, "Carnivore");
     } // Frog
 
     /**
