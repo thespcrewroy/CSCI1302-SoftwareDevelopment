@@ -73,3 +73,13 @@ Garfield is an agile cat.
 ```
 
 </details>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png" width="2000" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/7-8.png" />
+</p>
+
+By declaring the `Animal` class abstract, we are telling the users of our hierarchy that they should not instantiate it (it doesn't really make sense to do so) and that they should instantiate one of the child classes instead.
