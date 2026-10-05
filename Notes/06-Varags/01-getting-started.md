@@ -37,8 +37,8 @@ From a caller's perspective, the change from `int[]` to `int...` indicates that 
 </p>
 
 Rules
-* A method can only have up to one varargs parameter; and
-* If a method has a varargs parameter, then it must be the last parameter declared in its parameter list.
+* A method can only have up to one varargs parameter
+* A method that has a varags parameter must be the last parameter declared in its parameter list
 
 ```java
 public static int sum(int num, int... nums) {
