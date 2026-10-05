@@ -16,7 +16,7 @@ public class Cat extends Animal {
      */
     @Override
     public void makeSound() {
-        System.out.println("Meow!");
+    System.out.println(this.getName() + " purrs and then meows!");
     } // makeSound
 
     /**
@@ -24,8 +24,7 @@ public class Cat extends Animal {
      */
     @Override
     public void describe() {
-        super.describe(); // calls the describe method of the parent.
-
+        System.out.println("This is a cat named " + this.getName() + ".");
         System.out.println(this.getName() + " is an agile cat."); // adds to it
     } // describe
 }

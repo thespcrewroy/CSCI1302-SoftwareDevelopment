@@ -6,7 +6,7 @@ package cs1302.animal;
  * respond rapidly to stimuli. Objects of this class are <em>immutable</em>,
  * i.e., they cannot be modified after construction.
  */
-public class Animal {
+public abstract class Animal {
 
     private final String name;
     private final String genus;
@@ -16,15 +16,24 @@ public class Animal {
      * Constructs a {@code Animal} object with the specified {@code genus} and
      * {@code species}.
      *
+     * @param name     name of the animal
      * @param genus    genus name of the animal
      * @param species  species name of the animal
-     * @param name     name of the animal
      */
     public Animal(String name, String genus, String species) {
         this.name = name;
         this.genus = genus;
         this.species = species;
     } // Animal
+
+    /**
+     * Returns the name of the animal.
+     *
+     * @return name of the animal
+     */
+    public String getName() {
+        return name;
+    } // getName
 
     /**
      * Returns the genus name of the animal.
@@ -45,26 +54,12 @@ public class Animal {
     } // getSpecies
 
     /**
-     * Returns the name of the animal.
-     *
-     * @return name of the animal
-     */
-    public String getName() {
-        return name;
-    } // getName
-
-    /**
      * Makes a sound that the animal makes.
      */
-    public void makeSound() {
-        System.out.println("Generic animal sound");
-    } // makeSound
+    public abstract void makeSound();
 
     /**
      * Prints a description of the {@Animal}.
      */
-    public void describe() {
-        System.out.println("This is an animal named " + this.name + ".");
-    } // describe
-
+    public abstract void describe();
 } // Animal
