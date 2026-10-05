@@ -6,17 +6,14 @@ package cs1302.animal;
 public class Driver {
 
     public static void main(String[] args) {
-        Animal animal = new Animal("Canis", "Lupus");
-        Dog dog = new Dog("Golden Retriever", "Buddy");
-        Cat cat = new Cat("Siamese", "Whiskers");
-
-        animal.describe();
-        animal.makeSound();
-
-        dog.describe();
-        dog.makeSound();
-        
+        // 1.
+        Cat cat = new Cat("Whiskers");
+        System.out.println("\nCat:");
         cat.describe();
-        cat.makeSound();
+
+        // 2.
+        Animal cat2 = new Cat("Garfield");
+        System.out.println("\nCat:");
+        cat2.describe();
     } // main
 } // Driver

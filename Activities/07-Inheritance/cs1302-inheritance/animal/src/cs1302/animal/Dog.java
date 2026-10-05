@@ -8,7 +8,6 @@ package cs1302.animal;
 public class Dog extends Animal {
 
     private final String breed;
-    private final String name;
 
     /**
      * Constructs a {@code Dog} object with the specified {@code breed}.
@@ -17,28 +16,9 @@ public class Dog extends Animal {
      * @param name   name of the dog
      */
     public Dog(String breed, String name) {
-        super("Canis", "Lupus Familiaris");
+        super("Canis", "Lupus Familiaris", name);
         this.breed = breed;
-        this.name = name;
     } // Dog
-
-    /**
-     * Returns the breed name of the dog.
-     *
-     * @return breed name of the dog
-     */
-    public String getBreed() {
-        return breed;
-    } // getBreed
-
-    /**
-     * Returns the name of the dog.
-     *
-     * @return name of the dog
-     */
-    public String getName() {
-        return name;
-    } // getName
 
     /**
      * Makes a sound that the dog makes.
@@ -53,6 +33,17 @@ public class Dog extends Animal {
      */
     @Override
     public void describe() {
-        System.out.println("This is a " + getGenus() + " " + getSpecies() + " of the breed " + breed + " named " + name);
+        super.describe(); // calls the describe method of the parent.
+
+        System.out.println(this.getName() + " is a loyal dog."); // adds to it
     } // describe
+
+    /**
+     * Returns the breed name of the dog.
+     *
+     * @return breed name of the dog
+     */
+    public String getBreed() {
+        return breed;
+    } // getBreed
 } // Dog

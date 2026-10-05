@@ -10,6 +10,7 @@ public class Animal {
 
     private final String genus;
     private final String species;
+    private final String name;
 
     /**
      * Constructs a {@code Animal} object with the specified {@code genus} and
@@ -17,10 +18,12 @@ public class Animal {
      *
      * @param genus    genus name of the animal
      * @param species  species name of the animal
+     * @param name     name of the animal
      */
-    public Animal(String genus, String species) {
+    public Animal(String genus, String species, String name) {
         this.genus = genus;
         this.species = species;
+        this.name = name;
     } // Animal
 
     /**
@@ -42,6 +45,15 @@ public class Animal {
     } // getSpecies
 
     /**
+     * Returns the name of the animal.
+     *
+     * @return name of the animal
+     */
+    public String getName() {
+        return name;
+    } // getName
+
+    /**
      * Makes a sound that the animal makes.
      */
     public void makeSound() {
@@ -49,10 +61,10 @@ public class Animal {
     } // makeSound
 
     /**
-     * Describes the animal.
+     * Prints a description of the {@Animal}.
      */
     public void describe() {
-        System.out.println("This is a " + genus + " " + species);
+        System.out.println("This is an animal named " + this.name + ".");
     } // describe
 
 } // Animal

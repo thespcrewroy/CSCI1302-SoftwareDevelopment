@@ -2,38 +2,14 @@ package cs1302.animal;
 
 public class Cat extends Animal {
 
-    private final String breed;
-    private final String name;
-
     /**
      * Constructs a {@code Cat} object with the specified {@code breed}.
      *
-     * @param breed  breed name of the cat
      * @param name   name of the cat
      */
-    public Cat(String breed, String name) {
-        super("Felis", "Catus");
-        this.breed = breed;
-        this.name = name;
+    public Cat(String name) {
+        super("Felis", "Catus", name);
     } // Cat
-
-    /**
-     * Returns the breed name of the cat.
-     *
-     * @return breed name of the cat
-     */
-    public String getBreed() {
-        return breed;
-    } // getBreed
-
-    /**
-     * Returns the name of the cat.
-     *
-     * @return name of the cat
-     */
-    public String getName() {
-        return name;
-    } // getName
 
     /**
      * Makes a sound that the cat makes.
@@ -44,11 +20,12 @@ public class Cat extends Animal {
     } // makeSound
 
     /**
-     * Describes the cat.
+     * Prints a description of the {@Cat}.
      */
     @Override
     public void describe() {
-        System.out.println("This is a " + getGenus() + " " + getSpecies() + " of the breed " + breed + " named " + name);
+        super.describe(); // calls the describe method of the parent.
+
+        System.out.println(this.getName() + " is an agile cat."); // adds to it
     } // describe
-    
 }
