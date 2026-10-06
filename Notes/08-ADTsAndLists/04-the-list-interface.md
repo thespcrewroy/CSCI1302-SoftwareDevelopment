@@ -31,7 +31,6 @@ System.out.println("Removed: " + myList.remove(0));
 System.out.println("List Size: " + myList.size());
 System.out.println("List Contents: " + myList.makeString(","));
 ```
-> Create an array-based or linked-based list and add four items to it.
 
 <br>
 
@@ -40,4 +39,3 @@ Removed: Cheese
 List Size: 3
 List Contents: Milk, Bread, Ice Cream
 ```
-> Program output.
