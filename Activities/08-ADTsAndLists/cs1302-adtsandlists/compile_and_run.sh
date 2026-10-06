@@ -8,5 +8,5 @@ cd "$activity_dir"
 
 mkdir -p bin
 
-javac -d bin -cp "cs1302-str-list.jar" Driver.java
+javac -d bin -cp "cs1302-str-list.jar" List.java LinkedBasedList.java Driver.java
 java -cp "bin:cs1302-str-list.jar" Driver

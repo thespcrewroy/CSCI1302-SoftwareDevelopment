@@ -38,9 +38,28 @@ public class Driver {
         System.out.println(finish.getNext().getNext().getNext()); // null
         System.out.println(n.getItem()); // World
         System.out.println(n.getNext()); // null
-        
-        
-        
 
+        // 3.
+        System.out.println();
+        List myList = new LinkedBasedList();
+        myList.add(0, "Bread");
+        myList.add(0, "Cheese");
+        myList.add(1, "Milk");
+        myList.add(3, "Ice Cream");
+        System.out.println("Removed: " + myList.remove(0));
+        System.out.println("List Size: " + myList.size());
+        System.out.println("List Contents: " + myList.makeString(", "));
+
+        // 4.
+        System.out.println();
+        List myRealList = new LinkedBasedList();
+        myRealList.add(0, "Bread");
+        myRealList.add(0, "Cheese");
+        myRealList.add(2, "Candy");
+        myRealList.add(2, "Milk");
+        myRealList.remove(2);
+        System.out.println("The item at index 2 is: " + myRealList.get(2));
+        System.out.println("List Size: " + myRealList.size());
+        System.out.println("List Contents: " + myRealList.makeString(", "));
     } // main
 } // Driver

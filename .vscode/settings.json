@@ -1,5 +1,5 @@
 {
     "java.project.referencedLibraries": [
-        "Activities/08-ADTsAndLists/cs1302-str-list.jar"
+        "Activities/08-ADTsAndLists/cs1302-adtsandlists/cs1302-str-list.jar"
     ]
 }
