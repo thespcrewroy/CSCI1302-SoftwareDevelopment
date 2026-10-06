@@ -42,24 +42,24 @@ public class Driver {
         // 3.
         System.out.println();
         List myList = new LinkedBasedList();
-        myList.add(0, "Bread");
-        myList.add(0, "Cheese");
-        myList.add(1, "Milk");
-        myList.add(3, "Ice Cream");
-        System.out.println("Removed: " + myList.remove(0));
-        System.out.println("List Size: " + myList.size());
-        System.out.println("List Contents: " + myList.makeString(", "));
+        myList.add(0, "Bread"); // Bread
+        myList.add(0, "Cheese"); // Cheese, Bread
+        myList.add(1, "Milk"); // Cheese, Milk, Bread
+        myList.add(3, "Ice Cream"); // Cheese, Milk, Bread, Ice Cream
+        System.out.println("Removed: " + myList.remove(0)); // Cheese
+        System.out.println("List Size: " + myList.size()); // 3
+        System.out.println("List Contents: " + myList.makeString(", ")); // Bread, Milk, Ice Cream
 
         // 4.
         System.out.println();
         List myRealList = new LinkedBasedList();
-        myRealList.add(0, "Bread");
-        myRealList.add(0, "Cheese");
-        myRealList.add(2, "Candy");
-        myRealList.add(2, "Milk");
-        myRealList.remove(2);
-        System.out.println("The item at index 2 is: " + myRealList.get(2));
-        System.out.println("List Size: " + myRealList.size());
-        System.out.println("List Contents: " + myRealList.makeString(", "));
+        myRealList.add(0, "Bread"); // Bread
+        myRealList.add(0, "Cheese"); // Cheese, Bread
+        myRealList.add(2, "Candy"); // Cheese, Bread, Candy
+        myRealList.add(2, "Milk"); // Cheese, Bread, Milk, Candy
+        myRealList.remove(2); // Cheese, Bread, Candy
+        System.out.println("The item at index 2 is: " + myRealList.get(2)); // Candy
+        System.out.println("List Size: " + myRealList.size()); // 3
+        System.out.println("List Contents: " + myRealList.makeString(", ")); // Cheese, Bread, Candy
     } // main
 } // Driver
