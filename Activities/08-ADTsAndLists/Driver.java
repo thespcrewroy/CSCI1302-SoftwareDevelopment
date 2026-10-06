@@ -1,4 +1,4 @@
-package cs1302.linkedlists;
+import cs1302.adt.Node;
 
 public class Driver {
 

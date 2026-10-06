@@ -1,5 +1,8 @@
 {
+    "java.project.sourcePaths": [
+        "Activities/08-ADTsAndLists"
+    ],
     "java.project.referencedLibraries": [
-        "Activities/08-ADTsAndLists/cs1302-linkedlists/lib/cs1302-str-list.jar"
+        "Activities/08-ADTsAndLists/cs1302-str-list.jar"
     ]
 }
