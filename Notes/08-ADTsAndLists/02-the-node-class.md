@@ -1,5 +1,9 @@
 # The Node Class
 
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/8-2.svg" />
+</p>
+
 ```java
 Node head = new Node("Cheese");
 head.setNext(new Node("Bread"));
