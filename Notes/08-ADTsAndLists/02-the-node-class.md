@@ -29,6 +29,8 @@ finish.setNext(new Node(","));
 finish.getNext().setNext(new Node("!"));
 ```
 
+Using your memory diagrams from the last step, write the output for the last seven lines of code. You should assume this code is in the same scope and has access to all the variables in your diagram.
+
 ```java
 System.out.println(finish.getItem()); // Hello
 System.out.println(finish.getNext().getItem()); // ,
