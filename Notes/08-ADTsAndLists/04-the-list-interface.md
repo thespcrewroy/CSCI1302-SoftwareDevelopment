@@ -10,3 +10,7 @@ A common ADT is the List interface. You can think of a ADT List as an ordered co
 |   `void`    | `clear`               | Removes all of the objects from the list. The list will be empty after this call returns.                                   |
 |   `int`     | `size`                | Returns the number of elements in the list.                                                                                 |
 |   `String`  | `makeString`          | Returns a string representation of this list with every string in the sequence separated.                                   |
+
+<p align="center">
+  <img src="https://github.com/thespcrewroy/CSCI1302-SoftwareDevelopment/blob/main/Notes/assets/8-4.png" />
+</p>
