@@ -18,7 +18,5 @@ The objects in a linked list are commonly referred to as nodes. Each node contai
 
 If we use an array to hold our items, we may need to allocate more space than we need in order to avoid creating new arrays each time we add a new item.
 
-<br>
-
 If we use a linked list to hold our items, we can connect new objects to existing objects without having to recreate the entire list since each object refers to the next.
 </details>
